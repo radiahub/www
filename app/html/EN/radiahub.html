@@ -15,57 +15,86 @@
 		</div>
 	</div>
 
-	<div class="page-docking-bottom" style="top:60px; left:0px; width:600px; max-width:100%; height:100%;">
-		<div id="DIV_FORM_TEMPLATE" class="fit form overflow-y">
+	<div class="page-docking-bottom" style="top:60px; left:0; width:400px; max-width:100%; height:100%;">
+		<div id="FORM_SSO_QRLOGIN" class="fit form overflow-y">
 
-			<div class="introduction">
-				<div class="callout"></div>
-				<div class="description">
-						<h1>Let us connect!</h1>
-						<h2><i class="zmdi zmdi-cloud-outline-alt"></i></h2>
-						<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt</h4>
+			<div class="question" style="margin-top:0; border-color: var(--question-focused-border);">
+				<div class="callout" style="background-color: var(--question-focused-callout);"></div>
+				<div class="description" style="border:0;">
+					<h2>Single Sign-On</h2>
+					<h4>Scan the QR code here below to login to radiahub</h4>
 				</div>
-				<div class="hint">
-					<h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+				<div class="input">
+					<input id="inp_qrcode" class="answer" data-options='{"type":"qr","target":"show_qrcode"}' type="hidden" value=""/>
+					<div class="square" style="width:55%; margin:0 auto;">
+						<div id="show_qrcode" class="content border-1-px border-light bg-white" style="padding:10px;"></div>
+					</div>
 				</div>
-
-				<div class="h5" style="padding:1.75em 0.75em 0 0.75em;">
-					<input id="chipgroup_id" type="hidden" class="answer" data-options='{"type":"chipgroup","radiobox":"NO"}'/>
-					<label for="CHIP_0">
-						<div class="chip all">
-							<input id="CHIP_0" class="chipgroup_id" type="checkbox">
-							<div class="caption">All</div>
-						</div>
-					</label>
-					<label for="CHIP_1">
-						<div class="chip">
-							<input id="CHIP_1" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
-							<div class="caption">Excepteur sint</div>
-						</div>
-					</label>
-					<label for="CHIP_2">
-						<div class="chip">
-							<input id="CHIP_2" class="chipgroup_id" type="checkbox" data-options='{"type":"checkbox"}'>
-							<div class="caption">Occaecat</div>
-						</div>
-					</label>
+				<div class="description" style="border:0;">
+					<h4>Alternatively, you can send an OTA auth request to your Android SSO application.</h4>
 				</div>
 
-				<div class="important">
-					<h4>
-						<span style="font-size:120%">*</span>&nbsp;Indicates required question 
-					</h4>
+				<div style="padding:0 3.5em 0.75em 2.5em;">
+					<div class="android" style="height:2em;">
+						<div class="col-5"></div>
+						<div class="col-1"></div>
+						<div class="col-15 overflow-none fit-height flex-left">
+							<div class="fit-width" style="font-size:105%;">
+								<select id="select_country_code">
+									<option value="0">Select a country</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="margin-s-top" style="height:2em;">
+						<div id="display_country_code" class="col-5 fit-height flex-left border-1-px-bottom border-dark" style="padding-bottom:0.15em; font-size:105%;">+62</div>
+						<div class="col-1"></div>
+						<div class="col-18 android overflow-none fit-height">
+							<div class="col-20 fit-height flex-left">
+								<input id="INP_PHONE_NO" class="answer" type="tel" data-options='{"type":"phone","select_country_code":"select_country_code","display_country_code":"display_country_code"}' placeholder="Phone number" style="font-size:105%;">
+							</div>
+							<div class="col-4 fit-height flex-right">
+								<div class="btn_address_book circle flex-middle" style="height:2.0em; width:2.0em;">
+									<i class="fa fa-address-book-o" style="font-size:120%;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+
+				<div class="hint margin-s-top border-1-px-bottom border-light">
+					<div class="col-7"></div>
+					<div class="col-10" style="padding-bottom:1.5em;">
+						<div class="button btn_download" style="padding:0.5em;">Send OTA request</div>
+					</div>
+					<div class="col-7"></div>
+				</div>
+
+				<div class="input h5">
+					<div style="height:2.2em; padding:1.75em 0.75em 0 0.75em;">
+						<label for="SWITCH_1">
+							<div class="col-20 fit-height flex-left" style="font-size:110%;">
+								Keep me connected
+							</div>
+							<div class="col-4 fit-height flex-right">
+								<div class="switch">
+									<input id="SWITCH_1" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+									<span class="slider"></span>
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+
+				<div style="height:2em;"></div>
+
 			</div>
-
-			<!-- questions come here -->
-
-			<div class="padding"></div>
 
 		</div>
 	</div>
 
-	<div class="absolute bg-darkwhite" style="top:60px; left:650px; height:400px; width:400px;">
+	<div class="absolute bg-darkwhite" style="top:60px; left:450px; height:400px; width:250px;">
 		<div class="margin-m-top padding-m-left">
 			<div class="col-10">
 				<button id="BTN_TEST_GET">TEST GET</button>
