@@ -1,0 +1,5 @@
+{
+	"package_id" : "radiahub.web.website",
+	"gateway"    : "../",
+	"theme_id"   : "light"
+}

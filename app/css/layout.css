@@ -1,0 +1,69 @@
+/* ************************************************************************ */
+/*
+	Module      : layout.css
+	Version     : 3.0R0.0
+
+	Author      : Denis Patrice <denispatrice@yahoo.com>
+	Copyright   : Copyright (c) Denis Patrice Dipl.-Ing. 2010, 2017
+								All rights reserved
+
+	Application : radiahub
+	Description : default website layout
+
+	Date+Time of change   By     Description
+	--------------------- ------ ----------------------------------------------
+	20-Jan-25 00:00 WIT   Denis  Deployment V. 2025 "Raymond Chandler"
+
+/* ************************************************************************ */
+
+/* ************************************************************************ */
+/* ************************************************************************ */
+/*                                                                          */
+/* LAYOUT                                                                   */
+/*                                                                          */
+/* ************************************************************************ */
+/* ************************************************************************ */
+
+html, body               { height:100%; margin:0; padding:0; font-family: Lato-regular; font-size: 16px; }
+.page.container .content { height:100%; overflow: hidden; overflow-y: auto; }
+
+@media screen and (max-width:599px) {
+	html, body { font-size: 14px; }
+}
+
+@media screen and (min-width:600px) and (max-width:899px) {
+	html, body { font-size: 15px; }
+}
+
+
+/* ************************************************************************ */
+/* ************************************************************************ */
+/*                                                                          */
+/* VISIBILITY                                                               */
+/*                                                                          */
+/* ************************************************************************ */
+/* ************************************************************************ */
+
+@media screen and (max-width:599px) {
+	.show-s              { display: block; }
+	.expand-s            { display: block; width: 100%; }
+	.hide-s, .collapse-s { display: none; }
+}
+
+@media screen and (min-width:600px) and (max-width:899px) {
+	.show-m              { display: block; }
+	.expand-m            { display: block; width: 100%; }
+	.hide-m, .collapse-m { display: none;  }
+}
+
+@media screen and (min-width:900px) {
+	.show-l              { display: block; }
+	.expand-l            { display: block; width: 100%; }
+	.hide-l, .collapse-l { display: none; }
+}
+
+
+
+
+/* End of file: layout.css
+/* ************************************************************************ */

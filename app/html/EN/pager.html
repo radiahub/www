@@ -1,0 +1,54 @@
+<div id="DIV_GLOBAL_CONTAINER" class="page bg-white overflow-none">
+
+	<div id="PANEL_LEFT" class="absolute fit-height header main overflow-none" style="top:0px; left:0px; width:25%;">
+	</div>
+	<div id="PANEL_SLIDER" class="absolute fit-height overflow-none" style="top:0px; left:25%; width:10px; cursor:ew-resize;"></div>
+	<div id="PANEL_RIGHT"  class="absolute fit-height bg-lightgray overflow-none" style="top:0px; left:calc(25% + 10px); width:calc(75% - 10px);">
+		<div id="DIV_CONT_INBOX" class="page-docking-top" style="height:50%">
+			<div id="DIV_SEARCH_HEADER" class="page-docking-top" style="height:60px;">
+				<div class="row fit-height flex-middle">
+					<div class="rounded foreground" style="width:90%; height:50px;">
+					
+						<div class="float-left fit-height flex-left padding-s-left" style="width:60px;">
+							<div id="BTN_NAVIGATION" class="circle flex-middle" style="width:40px; height:40px; cursor:pointer;">
+								<i class="zmdi zmdi-menu h2 text dark"></i>
+							</div>
+						</div>
+
+						<div class="float-left fit-height flex-left padding-s-left padding-s-right" style="width:calc(100% - 180px);">
+							<input id="INP_SEARCH" class="fit-width h4x" type="tel" placeholder="Search"/>
+						</div>
+
+						<div class="float-right fit-height flex-right padding-s-right" style="width:60px;">
+							<div id="BTN_PROFILE" class="circle flex-middle" style="width:40px; height:40px;">
+								<i class="zmdi zmdi-account-o text dark" style="font-size:150%;"></i>
+							</div>
+						</div>
+
+						<div class="float-right fit-height flex-right padding-s-right" style="width:60px;">
+							<div id="BTN_DISPLAY_MODE" class="circle flex-middle" style="width:40px; height:40px;">
+								<img id="IMG_ICON_COLUMNS" src="app/res/tiles-black.png" alt="" style="height:1.2em;" />
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="DIV_CONT_API_CODE" class="page-docking-bottom bg-black fg-white" style="height:50%;">
+		</div>
+	</div>
+</div>
+
+<div id="DIV_CONT_PAGER" style="position:absolute; top:calc(100% - 620px); left:calc(100% - 320px); width:320px; height:620px; z-index:10;">
+	<div id="DIV_CONT_PAGER_HANDLE" class="row" style="height:40px; cursor:move;">
+		<div class="relative float-right flex-middle" style="width:40px; height:40px;">
+			<div id="BTN_CLOSE_PAGER" class="circle accent flex-middle shadow-00" style="width:28px; height:28px; cursor:pointer;">
+				<i class="zmdi zmdi-close h3"></i>
+			</div>
+		</div>
+	</div>
+	<div id="mydivcontent" class="page-docking-bottom bg-white padding-m" style="top:42px; border:1px solid #E0E0E0; border-top-left-radius:1em; border-top-right-radius:1em;">
+		<div id="mydivfooter" class="page-docking-bottom bg-darkwhite" style="height:36px;"></div>
+	</div>
+</div>

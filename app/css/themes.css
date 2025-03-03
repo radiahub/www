@@ -1,0 +1,156 @@
+/* ************************************************************************ */
+/*
+Module      : themes.css
+Version     : 3.0R0.0
+
+Author      : Denis Patrice <denispatrice@yahoo.com>
+Copyright   : Copyright (c) Denis Patrice Dipl.-Ing. 2010, 2017
+              All rights reserved
+
+Application : Main website
+Description : Default scheme: themes definition
+
+Date+Time of change   By     Description
+--------------------- ------ ----------------------------------------------
+20-Jan-25 00:00 WIT   Denis  Deployment V. 2025 "Raymond Chandler"
+
+/* ************************************************************************ */
+
+/* ************************************************************************ */
+/* ************************************************************************ */
+/*                                                                          */
+/* COLOR SCHEMES                                                            */
+/*                                                                          */
+/* ************************************************************************ */
+/* ************************************************************************ */
+
+.theme-light {
+
+	--background                  : #FFFFFF   ;
+	--overlay                     : #F0F0F8   ;
+	--ripple                      : #A0B0D0   ;
+	--selected                    : #CEE4FD   ;
+	--contrast                    : #303049   ;
+	--accent                      : #006E94   ;
+	--header                      : #F2F2F2   ;
+	--gossip                      : #D4EBD4   ;
+
+	--text                        : #212121   ;
+	--text-light                  : #6F6F6F   ;
+	--text-dark                   : #000000   ;
+	--text-overlay                : #212121   ;
+	--text-selected               : #006E94   ;
+	--text-contrast               : #F0F0F6   ;
+	--text-accent                 : #FFFFFF   ;
+	--text-header                 : #006E94   ;
+	--text-gossip                 : #000000   ;
+
+	--border-light                : #DADADA   ;
+	--border-dark                 : #B1B3B4   ;
+
+	--control-disabled-border     : #AAAAAA   ;
+	--control-disabled-background : transparent ;
+	--control-disabled-foreground : #AAAAAA   ;
+	--control-disabled-text       : #AAAAAA   ;
+	--control-off-border          : #5F6368   ;
+	--control-off-background      : transparent ;
+	--control-off-foreground      : #C5C1C6   ;
+	--control-off-text            : #C5C1C6   ;
+	--control-on-border           : #006E94   ;
+	--control-on-background       : #006E94   ;
+	--control-on-foreground       : #FFFFFF   ;
+	--control-on-text             : #FFFFFF   ;
+
+	--control-action-border       : #000000   ;
+	--control-action-background   : #303030   ; 
+	--control-action-foreground   : #FFFFFF   ;
+	--control-action-text         : #FFFFFF   ;
+
+	--border-chart-grid           : #B0B0B0   ;
+	--fg-chart-grid               : #333333   ;
+	--logo-background             : transparent ;
+	--logo-color                  : #0D0D0D   ;
+	--logo-border                 : #0D0D0D   ;
+
+}
+
+.theme-dark {
+
+	--background                  : #000000   ;
+	--overlay                     : #1D1D1D   ;
+	--ripple                      : #9090A0   ;
+	--selected                    : #242632   ;
+	--contrast                    : #C0C4C8   ;
+	--accent                      : #006E94   ;
+	--header                      : #303049   ;
+	--gossip                      : #D4EBD4   ;
+
+	--text                        : #E6E6E6   ;
+	--text-light                  : #808080   ;
+	--text-dark                   : #FFFFFF   ;
+	--text-overlay                : #E0E0E0   ;
+	--text-selected               : #E0E0E0   ;
+	--text-contrast               : #101010   ;
+	--text-accent                 : #F0F0F0   ;
+	--text-header                 : #006E94   ;
+	--text-gossip                 : #000000   ;
+
+	--border-light                : #404050   ;
+	--border-dark                 : #5F6368   ;
+
+	--control-disabled-border     : #404050   ;
+	--control-disabled-background : transparent ;
+	--control-disabled-foreground : #404050   ;
+	--control-disabled-text       : #404050   ;
+	--control-off-border          : #404050   ;
+	--control-off-background      : transparent ;
+	--control-off-foreground      : #5F6368   ;
+	--control-off-text            : #5F6368   ;
+	--control-on-border           : #006E94   ;
+	--control-on-background       : #006E94   ;
+	--control-on-foreground       : #E0E0E0   ;
+	--control-on-text             : #E0E0E0   ;
+
+	--control-action-border       : #E0E0E0   ;
+	--control-action-background   : #E0E0E0   ; 
+	--control-action-foreground   : #303030   ;
+	--control-action-text         : #212121   ;
+
+	--border-chart-grid           : #354955   ;
+	--fg-chart-grid               : #8D9599   ;
+	--logo-background             : transparent ;
+	--logo-color                  : #E0E0E0   ;
+	--logo-border                 : #E0E0E0   ;
+
+}
+
+
+/* ************************************************************************ */
+/* ************************************************************************ */
+/*                                                                          */
+/* COLOR CLASSES                                                            */
+/*                                                                          */
+/* ************************************************************************ */
+/* ************************************************************************ */
+
+.text                     { color:var(--text); }
+.text-light               { color:var(--text-light); }
+.text-dark                { color:var(--text-dark); }
+.overlay                  { background-color:var(--text-overlay); }
+.overlay, .text-overlay   { color:var(--text-contrast); }
+.selected                 { background-color:var(--selected); }
+.selected, .text-selected { color:var(--text-selected); }
+.contrast                 { background-color:var(--contrast); }
+.contrast, .text-contrast { color:var(--text-contrast); }
+.accent                   { background-color:var(--accent); }
+.accent, .text-accent     { color:var(--text-accent); }
+.header                   { background-color:var(--header); }
+.header, .text-header     { color:var(--text-header); }
+.gossip                   { background-color:var(--gossip); }
+.gossip, .text-gossip     { color:var(--text-gossip); }
+
+
+
+
+/* End of file: themes.css
+/* ************************************************************************ */

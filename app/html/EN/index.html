@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="theme-[theme_id]">
+<head>
+	<meta http-equiv="Content-Security-Policy" content="connect-src *; child-src * 'unsafe-inline'; default-src * 'unsafe-inline' 'unsafe-eval' blob: data:; img-src * blob: data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval' blob: data:;">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta charset="UTF-8">
+
+	<title>radiahub website</title>
+
+	<!-- Framework styles -->
+	<link rel="stylesheet" type="text/css" href="../lib/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/default.css">
+	<link rel="stylesheet" type="text/css" href="../lib/css/controls.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/Lato/Lato.css">
+
+	<!-- Import styles -->
+	<link rel="stylesheet" type="text/css" href="../lib/import/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../lib/import/font_awesome/css/font-awesome.min.css">
+
+	<!-- Import external libraries -->
+	<script src="../lib/import/jquery/jquery-3.4.1.min.js"></script>
+	<script src="../lib/import/jquery/jquery.mask.min.js"></script>
+	<script src="../lib/import/jquery/jquery.qrcode.min.js"></script>
+	<script src="../lib/import/js/md5.js"></script>
+	<script src="../lib/import/js/stacktrace.min.js"></script>
+	<script src="../lib/import/moment/moment.min.js"></script>
+
+	<!-- Build framework -->
+	<script src="../lib/js/application.js"></script>
+	<script src="../lib/js/connect.js"></script>
+	<script src="../lib/js/context.js"></script>
+	<script src="../lib/js/controls.js"></script>
+	<script src="../lib/js/cookies.js"></script>
+	<script src="../lib/js/countries.js"></script>
+	<script src="../lib/js/datetime.js"></script>
+	<script src="../lib/js/dbupload.js"></script>
+
+	<script src="../lib/js/filesystem.js"></script>
+
+	<script src="../lib/js/image.js"></script>
+	<script src="../lib/js/image_capture.js"></script>
+	<script src="../lib/js/image_edit.js"></script>
+	<script src="../lib/js/inputmask.js"></script>
+	<script src="../lib/js/ipc.js"></script>
+	<!--
+	<script src="../lib/js/fcm.js"></script>
+	-->
+	<script src="../lib/js/fcmweb.js"></script>
+	<script src="../lib/js/globalization.js"></script>
+	<script src="../lib/js/lib.js"></script>
+	<script src="../lib/js/msisdn.js"></script>
+	<script src="../lib/js/pages.js"></script>
+	<script src="../lib/js/qrcode.js"></script>
+	<script src="../lib/js/run.js"></script>
+	<script src="../lib/js/storage.js"></script>
+	<script src="../lib/js/theme.js"></script>
+	<script src="../lib/js/xdbref.js"></script>
+
+	<!-- Applets -->
+	<!--
+	<link rel="stylesheet" type="text/css" href="../applets/forms/css/forms.css">
+	-->
+	<script src="../applets/forms/js/checkbox.js"></script>
+	<script src="../applets/forms/js/chipgroup.js"></script>
+	<script src="../applets/forms/js/fileupload.js"></script>
+	<script src="../applets/forms/js/form.js"></script>
+	<script src="../applets/forms/js/phone.js"></script>
+	<script src="../applets/forms/js/qr.js"></script>
+	<script src="../applets/forms/js/radiobox.js"></script>
+	<script src="../applets/forms/js/select.js"></script>
+	<script src="../applets/forms/js/single_image.js"></script>
+	<script src="../applets/forms/js/text.js"></script>
+	<script src="../applets/forms/js/textarea.js"></script>
+
+	<!-- Application implementation -->
+	<link rel="stylesheet" type="text/css" href="app/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="app/css/themes.css">
+	<link rel="stylesheet" type="text/css" href="app/css/forms.css">
+	<script src="app/js/main.js"></script>
+	<script src="app/js/pager.js"></script>
+	<script src="app/js/radiahub.js"></script>
+	<script src="app/js/sysmon.js"></script>
+
+</head>
+<body>
+
+	<div class="absolute" style="top:-1000px; width:100px; height:100px; left:-1000px;">
+		<p id="P_FOR_CSS" style="display:block;"></p>
+	</div>
+
+	<script type="module">
+
+		// Import the functions you need from the SDKs you need
+		// https://firebase.google.com/docs/web/setup#available-libraries
+		//
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+		import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging.js";
+
+		const firebaseConfig = {
+			apiKey: "AIzaSyBMtLvOQGzzak8qTg04WU4AqdcENMzpyiA",
+			authDomain: "radiahub-105.firebaseapp.com",
+			databaseURL: "https://radiahub-105.firebaseio.com",
+			projectId: "radiahub-105",
+			storageBucket: "radiahub-105.firebasestorage.app",
+			messagingSenderId: "526889796130",
+			appId: "1:526889796130:web:04a3a4a5a2c4345b22807b",
+			measurementId: "G-J1WE2X0X5X"
+		};
+
+		// Initialize Firebase
+		//
+		const app = initializeApp(firebaseConfig);
+		const messaging = getMessaging(app);
+
+		fcmweb.requestPermission()
+		.then (()=>{
+			//console.log("Resolved by fcmweb.requestPermission()");
+			getToken(messaging, {vapidKey: "BF-AgR3dVODHFUw5uH1e-aEJEmX0Y-uBcQn5nlTTGy77WM5S4J5N-t4dUzMBP4aVNusGBA0y1Pu-oHVad3mr5A4"})
+			.then((currentToken) => {
+				console.log("Resolved by getToken()"); 
+				//console.log("currentToken='" + currentToken + "'");
+				fcmweb.init(currentToken)
+				.then (()=>{
+					console.log("Resolved by fcmweb.init()");
+					application.run();
+				})
+				.catch(()=>{
+					console.error("Rejected by fcmweb.init()");
+				});
+			})
+			.catch((err) => {
+				console.error("Rejected by getToken()");
+				console.error(err);
+				alert("Unresolved FCM token, application will not load.\nPlease check your Internet connection.");
+			});		
+
+		})
+		.catch(()=>{
+			console.warn("Rejected by fcmweb.requestPermission()");
+			application.run();
+		});
+
+	</script>
+
+</body>
+</html>
