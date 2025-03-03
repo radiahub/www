@@ -21,17 +21,18 @@
 			<div class="question" style="margin-top:0; border-color: var(--question-focused-border);">
 				<div class="callout" style="background-color: var(--question-focused-callout);"></div>
 				<div class="description" style="border:0;">
-					<h2>Single Sign-On</h2>
-					<h4>Scan the QR code here below to login to radiahub</h4>
+					<h2>SSO Login</h2>
+					<h4>Scan the QR code below:</h4>
 				</div>
 				<div class="input">
 					<input id="inp_qrcode" class="answer" data-options='{"type":"qr","target":"show_qrcode"}' type="hidden" value=""/>
 					<div class="square" style="width:55%; margin:0 auto;">
 						<div id="show_qrcode" class="content border-1-px border-light bg-white" style="padding:10px;"></div>
 					</div>
+					<div class="h6 padding-s-top text-light text-center">Click to enlarge</div>
 				</div>
 				<div class="description" style="border:0;">
-					<h4>Alternatively, you can send an OTA auth request to your Android SSO application.</h4>
+					<h4>Or send an OTA request to your phone:</h4>
 				</div>
 
 				<div style="padding:0 3.5em 0.75em 2.5em;">
@@ -63,7 +64,7 @@
 					</div>
 				</div>
 
-				<div class="hint margin-s-top border-1-px-bottom border-light">
+				<div class="hint margin-m-top">
 					<div class="col-7"></div>
 					<div class="col-10" style="padding-bottom:1.5em;">
 						<div class="button btn_download" style="padding:0.5em;">Send OTA request</div>
@@ -71,23 +72,21 @@
 					<div class="col-7"></div>
 				</div>
 
-				<div class="input h5">
-					<div style="height:2.2em; padding:1.75em 0.75em 0 0.75em;">
-						<label for="SWITCH_1">
-							<div class="col-20 fit-height flex-left" style="font-size:110%;">
-								Keep me connected
+				<div class="h5" style="height:2.2em; padding:1.75em 1.25em 0 1.0em;">
+					<label for="SWITCH_1">
+						<div class="col-20 fit-height flex-left" style="font-size:110%;">
+							Keep me connected
+						</div>
+						<div class="col-4 fit-height flex-right">
+							<div class="switch">
+								<input id="SWITCH_1" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
+								<span class="slider"></span>
 							</div>
-							<div class="col-4 fit-height flex-right">
-								<div class="switch">
-									<input id="SWITCH_1" class="answer" type="checkbox" data-options='{"type":"checkbox"}' checked="checked">
-									<span class="slider"></span>
-								</div>
-							</div>
-						</label>
-					</div>
+						</div>
+					</label>
 				</div>
 
-				<div style="height:2em;"></div>
+				<div style="height:3em;"></div>
 
 			</div>
 

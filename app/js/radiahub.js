@@ -74,7 +74,12 @@ var radiahub = {
 		//console.log("IN radiahub.onshow()");
 		//console.log(pages.dump());
 
-		myform = new form("DIV_FORM_TEMPLATE");
+		myform = new form("FORM_SSO_QRLOGIN");
+
+		var input_id = "inp_qrcode";
+		var value = file2bin(context.libpath() + "radiahub_denis.vcf");
+		myform.set(input_id, value);
+
 
 		jQuery("#BTN_TEST_GET").off("click").on("click", function(){
 			var input_id = "inp_qrcode";
