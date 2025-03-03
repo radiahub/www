@@ -34,6 +34,7 @@ var main = {
 				console.info("IN main.run()");
 				setTimeout(
 					function() {
+						console.log(device);
 						/*
 						console.log(application.package_id);
 						console.log(application.device_id);
