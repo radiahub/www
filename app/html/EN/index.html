@@ -99,16 +99,7 @@
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 		import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-messaging.js";
 
-		const firebaseConfig = {
-			apiKey: "AIzaSyBMtLvOQGzzak8qTg04WU4AqdcENMzpyiA",
-			authDomain: "radiahub-105.firebaseapp.com",
-			databaseURL: "https://radiahub-105.firebaseio.com",
-			projectId: "radiahub-105",
-			storageBucket: "radiahub-105.firebasestorage.app",
-			messagingSenderId: "526889796130",
-			appId: "1:526889796130:web:04a3a4a5a2c4345b22807b",
-			measurementId: "G-J1WE2X0X5X"
-		};
+		const firebaseConfig = JSON.parse(payload_decode(file2bin("./firebaseConfig.php")));
 
 		// Initialize Firebase
 		//
