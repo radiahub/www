@@ -6,6 +6,7 @@ typings/
 #Deployment security
 .well-known
 radiahub.22web.org/
+firebaseConfig.php
 
 #Node artifact files
 node_modules/
