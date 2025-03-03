@@ -1,9 +1,9 @@
-radiahub.htdocs "htdocs"
------------------------
+radiahub.htdocs/www "www"
+-------------------------
 
 package_id  : radiahub.htdocs
 Author      : Denis Auguste Patrice <radiahub@gmail.com>
-Description : Server application container
+Description : radiahub web site
 Timestamp   : [2025]-[Mar]-[03] [23]:[59]
 
 
@@ -43,4 +43,5 @@ Timestamp   : [2025]-[Mar]-[03] [23]:[59]
 	Initial push action
   Verify data on Github
 	
+
 End of file: htdocs.history
